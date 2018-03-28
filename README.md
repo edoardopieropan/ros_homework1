@@ -1,6 +1,6 @@
-# ros_homework1
-First Homework - Laboratorio Ciberfisico UniVR <br >
-The exercise is <http://profs.scienze.univr.it/~bloisi/corsi/homework/homework-1.pdf>
+# ros_homework1 <br >First Homework - Laboratorio Ciberfisico UniVR
+
+The exercise is the following <http://profs.scienze.univr.it/~bloisi/corsi/homework/homework-1.pdf>
 
 ![laboratorio ciberfisico](images/cyberphysical-lab.jpg)
 
