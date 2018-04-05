@@ -9,7 +9,28 @@ The exercise is the following <http://profs.scienze.univr.it/~bloisi/corsi/homew
 ### Prerequisites
 
 You need [ROS Kinetic](http://wiki.ros.org/kinetic/Installation) installed and working <br >
-and follow the tutorial at [TutleBot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/#pc-setup)
+follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>
+
+### Try it
+
+You can run the launch file by typing:
+Note: homework1 is the package's name
+
+```
+roslaunch homework1 launch_file.launch
+```
+You can press <br >
+a -> displays Name, Age, Course <br >
+n -> displays only name <br >
+e -> displays only age <br >
+c -> displays only Course <br >
+
+Press CTRL+Z to quit
+
+### Structure and Infos
+The node's structure is the following
+
+Nodo1 send every 1 second a message to Nodo3 containing name, age, course information. Nodo3 saves the values received. Nodo2 is listening to a keyboard input and when ENTER is pressed a message is sended to Nodo3 that will process the input and display the right output.
 
 ## License
 
