@@ -10,6 +10,7 @@ The exercise is the following <http://profs.scienze.univr.it/~bloisi/corsi/homew
 
 You need [ROS Kinetic](http://wiki.ros.org/kinetic/Installation) installed and working <br >
 Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>
+<br > If you need another tutorial about custom msgs you can watch [THIS](https://www.youtube.com/watch?v=ilRAlo5hi5o) video.
 
 ### Try it
 
