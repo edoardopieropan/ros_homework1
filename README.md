@@ -48,5 +48,5 @@ Use it at your own risk.
 [Robot Programming with ROS](http://profs.scienze.univr.it/%7Ebloisi/corsi/ciberfisico.html) <br >
 A.Y. 2017/2018 <br >
 University of Verona (Italy) <br >
-Repository Author: <br >
+Repository Author: <br > <br >
 **Edoardo Pieropan**
