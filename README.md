@@ -14,17 +14,17 @@ Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.
 
 ### Try it
 
-You can run the launch file by typing:
-Note: homework1 is the package's name <br >
+You can run the launch file by typing: <br >
+Note: homework1 is the package's name
 
 ```
 roslaunch homework1 launch_file.launch
 ```
 You can press <br >
-a -> displays Name, Age, Course <br >
-n -> displays only Name <br >
-e -> displays only Age <br >
-c -> displays only Course <br >
+*a* -> displays Name, Age, Course <br >
+*n* -> displays only Name <br >
+*e* -> displays only Age <br >
+*c* -> displays only Course <br >
 
 Press  ```CTRL+Z``` to quit
 
