@@ -31,7 +31,7 @@ Press  ```CTRL+Z``` to quit
 ### Structure and Info
 The msg's structure is in msg/personInfo.msg <br >
 The node's structure is the following
-
+![node structure](images/nodeStructure.png)
 Nodo1 send every 1 second a message to Nodo3 containing name, age, course information. Nodo3 saves the values received. Nodo2 is listening to a keyboard input and when ENTER is pressed a message is sended to Nodo3 that will process the input and display the right output.
 
 ## License
