@@ -23,103 +23,61 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
+ * 
+ * Contributor: Edoardo Pieropan
  */
 
-// %Tag(FULLTEXT)%
 #include "ros/ros.h"
 #include "homework1/personInfo.h"
 #include "std_msgs/String.h"
 
-ros::Publisher filtered_pub;
+//selecter will store the last letter received, default 'a'
 char selected = 'a';
 
+//The message received by Nodo1 will assign a value to all this varibles
 std::string name;
 std::string course;
 int age;
 
-/**
- * This tutorial demonstrates simple receipt of messages over the ROS system.
- */
-// %Tag(CALLBACK)%
+//Callback Nodo1, will modify the person information
 void chatterCallbackNodo1(const homework1::personInfo& msg)
 {
   name = msg.name;
   course = msg.course;
   age = msg.age;
 }
-// %EndTag(CALLBACK)%
 
+//Callback Nodo2, will display the chosen information
 void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
 {
   ROS_INFO("New input: [%s]", msg->data.c_str());
   selected = msg->data.c_str()[0];
 
-   if(selected == 'a')
+  //Can be done also w/ switch-case
+  if(selected == 'a')
     ROS_INFO("Name: [%s], Age: [%i], Course: [%s]",name.c_str(), age, course.c_str());
 
-  else if(selected == 'n'){
+  else if(selected == 'n')
     ROS_INFO("Name: [%s]", name.c_str());
-  }
 
-  else if(selected == 'e'){
+  else if(selected == 'e')
     ROS_INFO("Age: [%i]", age);
-  } 
 
-  else if(selected == 'c'){
+  else if(selected == 'c')
     ROS_INFO("Course: [%s]",course.c_str());
-  }
 }
 
 
 int main(int argc, char **argv)
 {
-  /**
-   * The ros::init() function needs to see argc and argv so that it can perform
-   * any ROS arguments and name remapping that were provided at the command line.
-   * For programmatic remappings you can use a different version of init() which takes
-   * remappings directly, but for most command-line programs, passing argc and argv is
-   * the easiest way to do it.  The third argument to init() is the name of the node.
-   *
-   * You must call one of the versions of ros::init() before using any other
-   * part of the ROS system.
-   */
   ros::init(argc, argv, "nodo3");
 
-  /**
-   * NodeHandle is the main access point to communications with the ROS system.
-   * The first NodeHandle constructed will fully initialize this node, and the last
-   * NodeHandle destructed will close down the node.
-   */
   ros::NodeHandle n;
 
-
-  /**
-   * The subscribe() call is how you tell ROS that you want to receive messages
-   * on a given topic.  This invokes a call to the ROS
-   * master node, which keeps a registry of who is publishing and who
-   * is subscribing.  Messages are passed to a callback function, here
-   * called chatterCallback.  subscribe() returns a Subscriber object that you
-   * must hold on to until you want to unsubscribe.  When all copies of the Subscriber
-   * object go out of scope, this callback will automatically be unsubscribed from
-   * this topic.
-   *
-   * The second parameter to the subscribe() function is the size of the message
-   * queue.  If messages are arriving faster than they are being processed, this
-   * is the number of messages that will be buffered up before beginning to throw
-   * away the oldest ones.
-   */
+  //Subscribers
   ros::Subscriber sub_nodo1 = n.subscribe("pub_nodo1", 1000, chatterCallbackNodo1);
   ros::Subscriber sub_nodo2 = n.subscribe("pub_nodo2", 1000, chatterCallbackNodo2);
 
-  /**
-   * ros::spin() will enter a loop, pumping callbacks.  With this version, all
-   * callbacks will be called from within this thread (the main one).  ros::spin()
-   * will exit when Ctrl-C is pressed, or the node is shutdown by the master.
-   */
-// %Tag(SPIN)%
   ros::spin();
-// %EndTag(SPIN)%
-
   return 0;
 }
-// %EndTag(FULLTEXT)%
