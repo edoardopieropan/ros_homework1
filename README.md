@@ -21,13 +21,13 @@ roslaunch homework1 launch_file.launch
 ```
 You can press <br >
 a -> displays Name, Age, Course <br >
-n -> displays only name <br >
-e -> displays only age <br >
+n -> displays only Name <br >
+e -> displays only Age <br >
 c -> displays only Course <br >
 
-Press CTRL+Z to quit
+Press  ```CTRL+Z``` to quit
 
-### Structure and Infos
+### Structure and Info
 The node's structure is the following
 
 Nodo1 send every 1 second a message to Nodo3 containing name, age, course information. Nodo3 saves the values received. Nodo2 is listening to a keyboard input and when ENTER is pressed a message is sended to Nodo3 that will process the input and display the right output.
