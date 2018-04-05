@@ -15,7 +15,7 @@ Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.
 ### Try it
 
 You can run the launch file by typing:
-Note: homework1 is the package's name
+Note: homework1 is the package's name <br >
 
 ```
 roslaunch homework1 launch_file.launch
