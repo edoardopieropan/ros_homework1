@@ -1,0 +1,5 @@
+<launch>
+    <node name="nodo1" pkg="homework1" type="nodo1"/>
+    <node name="nodo2" pkg="homework1" type="nodo2" output="screen"/>
+    <node name="nodo3" pkg="homework1" type="nodo3" output="screen"/>
+</launch>
