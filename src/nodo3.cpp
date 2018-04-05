@@ -50,7 +50,9 @@ void chatterCallbackNodo1(const homework1::personInfo& msg)
 //Callback Nodo2, will display the chosen information
 void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
 {
-  ROS_INFO("New input: [%s]", msg->data.c_str());
+  ROS_INFO("New input received: [%s]", msg->data.c_str());
+
+  char selectedBackup=selected; //To restore the old value if the letter is not a right one
   selected = msg->data.c_str()[0];
 
   //Can be done also w/ switch-case
@@ -65,6 +67,11 @@ void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
 
   else if(selected == 'c')
     ROS_INFO("Course: [%s]",course.c_str());
+  
+  else{
+    ROS_INFO("INVALID VALUE, you can choose between:\na (all)\nn (name)\ne (age)\nc (course)");
+    selected = selectedBackup;
+  }
 }
 
 

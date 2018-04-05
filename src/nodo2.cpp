@@ -51,9 +51,7 @@ int main(int argc, char **argv)
     std::cin>>insert;
     ss<<insert;
     msg.data = ss.str();
-
-    ROS_INFO("%s", msg.data.c_str());
-
+    
     pub_nodo2.publish(msg);
     loop_rate.sleep();
   }
