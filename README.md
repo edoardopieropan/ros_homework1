@@ -49,4 +49,4 @@ Use it at your own risk.
 A.Y. 2017/2018 <br >
 University of Verona (Italy) <br >
 Repository Author: <br >
-** *Edoardo Pieropan* **
+** Edoardo Pieropan **
