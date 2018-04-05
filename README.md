@@ -9,7 +9,7 @@ The exercise is the following <http://profs.scienze.univr.it/~bloisi/corsi/homew
 ### Prerequisites
 
 You need [ROS Kinetic](http://wiki.ros.org/kinetic/Installation) installed and working <br >
-follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>
+Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>
 
 ### Try it
 
@@ -35,8 +35,9 @@ Nodo1 send every 1 second a message to Nodo3 containing name, age, course inform
 ## License
 
 This file is part of hello_ros and it is distributed under the terms of the GNU Lesser General Public License (Lesser GPL) <br >
-Visit <http://www.gnu.org/licenses/>
+Visit <http://www.gnu.org/licenses/> <br >
 
+Use it at your own risk.
 ## References
 
 ***Laboratorio Ciberfisico*** <br >
