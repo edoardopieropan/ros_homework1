@@ -69,7 +69,7 @@ void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
     ROS_INFO("Course: [%s]",course.c_str());
   
   else{
-    ROS_INFO("INVALID VALUE, you can choose between:\na (all)\nn (name)\ne (age)\nc (course)");
+    ROS_INFO("\nINVALID VALUE, you can choose between:\na (all)\nn (name)\ne (age)\nc (course)");
     selected = selectedBackup;
   }
 }
@@ -85,7 +85,6 @@ int main(int argc, char **argv)
   ros::Subscriber sub_nodo1 = n.subscribe("pub_nodo1", 1000, chatterCallbackNodo1);
   ros::Subscriber sub_nodo2 = n.subscribe("pub_nodo2", 1000, chatterCallbackNodo2);
   
-  ROS_INFO("Select one of the following options:\na (all)\nn (name)\ne (age)\nc (course)\n");
   ros::spin();
   return 0;
 }
