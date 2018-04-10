@@ -18,7 +18,7 @@ Go in your catkin_ws folder, you can run the launch file by typing: <br >
 ```
 roslaunch homework1 launch_file.launch
 ```
-Note: homework1 is the package's name <br >
+Note: ```homework1``` is the package's name <br >
 
 You can choose a letter and then press the ENTER key to set what you want to see in output <br >
 The avaiable options are the following: <br >
