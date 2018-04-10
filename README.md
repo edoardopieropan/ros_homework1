@@ -14,13 +14,14 @@ Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.
 
 ### Try it
 
-You can run the launch file by typing: <br >
-Note: homework1 is the package's name
-
+Go in your catkin_ws folder, you can run the launch file by typing: <br >
 ```
 roslaunch homework1 launch_file.launch
 ```
-You can choose to see between the following options: <br >
+Note: homework1 is the package's name <br >
+
+You can choose a letter and then press the ENTER key to set what you want to see in output <br >
+The avaiable options are the following: <br >
 **a** -> displays Name, Age, Course <br >
 **n** -> displays only Name <br >
 **e** -> displays only Age <br >
@@ -37,11 +38,10 @@ The node's structure is the following
 Nodo1 send every 1 second a message to Nodo3 containing name, age, course information. Nodo3 saves the values received. Nodo2 is listening to a keyboard input and when ENTER key is pressed a message is sended to Nodo3 that will process the input and display the corresponding output.
 
 ## License
-
+Before use it I invite you to read the LICENSE <br >
 This file is part of hello_ros and it is distributed under the terms of the GNU Lesser General Public License (Lesser GPL) <br >
 Visit <http://www.gnu.org/licenses/> <br >
 
-Use it at your own risk.
 ## References
 
 ***Laboratorio Ciberfisico*** <br >
