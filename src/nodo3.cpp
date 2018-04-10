@@ -74,9 +74,19 @@ void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
   }
 }
 
+//Test
+void handler(sig_t s){
+  ROS_INFO("\nCaught signal %d\nClosing application...\n", s);
+  exit(1);
+}
+//endTest
 
 int main(int argc, char **argv)
 {
+  //Test
+  signal(SIGINT, handler);
+  //endTest
+  
   ros::init(argc, argv, "nodo3");
 
   ros::NodeHandle n;
