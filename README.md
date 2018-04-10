@@ -39,7 +39,7 @@ Nodo1 send every 1 second a message to Nodo3 containing name, age, course inform
 
 ## License
 Before use it I invite you to read the LICENSE <br >
-This file is part of hello_ros and it is distributed under the terms of the GNU Lesser General Public License (Lesser GPL) <br >
+This file is distributed under the terms of the GNU Lesser General Public License (Lesser GPL) <br >
 Visit <http://www.gnu.org/licenses/> <br >
 
 ## References
