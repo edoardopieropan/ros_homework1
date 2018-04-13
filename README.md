@@ -14,7 +14,7 @@ Follow the tutorials at: <br > <http://wiki.ros.org/msg> <br > <http://wiki.ros.
 
 ### Try it
 
-Go in your catkin_ws folder, you can run the launch file by typing: <br >
+You can run the launch file by typing: <br >
 ```
 roslaunch homework1 launch_file.launch
 ```
@@ -35,7 +35,7 @@ The node's structure is the following
 
 ![node structure](images/rosgraph.png)
 
-Nodo1 send every 1 second a message to Nodo3 containing name, age, course information. Nodo3 saves the values received. Nodo2 is listening to a keyboard input and when ENTER key is pressed a message is sended to Nodo3 that will process the input and display the corresponding output.
+Nodo1 send every 1 second a message to Nodo3 containing name, age, course information.<br > Nodo3 saves the values received waiting for a command callback.<br > Meanwhile Nodo2 is listening to a keyboard input and when ENTER key is pressed, a message is sended to Nodo3 that will process the input and display the corresponding output.
 
 ## License
 Before use it I invite you to read the LICENSE <br >
