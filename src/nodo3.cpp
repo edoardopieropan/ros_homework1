@@ -67,28 +67,16 @@ void chatterCallbackNodo2(const std_msgs::String::ConstPtr& msg)
 
   else if(selected == 'c')
     ROS_INFO("Course: [%s]",course.c_str());
-  
+
   else{
     ROS_INFO("\nINVALID VALUE, you can choose between:\na (all)\nn (name)\ne (age)\nc (course)");
     selected = selectedBackup;
   }
 }
 
-//Test
-void handler(sig_t s){
-  ROS_INFO("\nCaught signal %d\nClosing application...\n", s);
-  ros::shutdown();
-}
-//endTest
-
 int main(int argc, char **argv)
 {
-  //Test
-  signal(SIGINT, handler);
-  //endTest
-  
   ros::init(argc, argv, "nodo3");
-
   ros::NodeHandle n;
 
   //Subscribers
