@@ -27,7 +27,7 @@ The avaiable options are the following: <br >
 **e** -> displays only Age <br >
 **c** -> displays only Course <br >
 
-Press `CTRL+C` and `CTRL+Z` to quit
+Press `CTRL+C` to quit
 
 ### Structure and Info
 The msg's structure is in msg/personInfo.msg <br >
